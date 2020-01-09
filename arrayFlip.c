@@ -10,7 +10,7 @@ int main()
     int i, numberHolder;
     int array[arrayLength];
     srand( time( NULL ) );
-    printf("\nPierwotny uklad:\n");
+    printf("\nInitial array:\n");
     for (i = 0; i < arrayLength; i++)
     {
         array[i] = rand() % randomNumberMax + randomNumberAddedValue;
@@ -22,7 +22,7 @@ int main()
         array[i] = array[arrayLength - 1 - i];
         array[arrayLength - 1 - i] = numberHolder;
     }
-    printf("\n\nNowy uklad:\n");
+    printf("\n\nResult array:\n");
     for (i = 0; i < arrayLength; i++)
     {
         printf("%d. %d\n", i + 1, array[i]);
