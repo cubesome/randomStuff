@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+
+int main()
+{
+    // Declaration of variables.
+    int a, b, c, tmp, i;
+
+    // Input.
+    printf("Provide the first number: ");
+    fflush(stdin);
+    scanf("%d", &a);
+    printf("Provide the second number: ");
+    fflush(stdin);
+    scanf("%d", &b);
+    printf("Provide the third number: ");
+    fflush(stdin);
+    scanf("%d", &c);
+
+    // Displaying received variables.
+    printf("\nNumbers to sort: %d, %d oraz %d.", a, b, c);
+
+    // Sorting.
+    if (a > b) {
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+    if (a > c) {
+        tmp = a;
+        a = c;
+        c = tmp;
+    }
+    if (b > c) {
+        tmp = b;
+        b = c;
+        c = tmp;
+    }
+
+    // Displaying results.
+    printf("\n\nSorted chain: %d %d %d\n\n", a, b, c);
+}
